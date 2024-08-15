@@ -70,10 +70,14 @@ To set up the project locally, follow these steps:
 
 2. Install the required dependencies:
     ```bash
-    pip install -r requirements.txt
+    pip3 install -r requirements.txt
+    ```
+3. Generate the IA model:
+    ```bash
+    python3 trendaizer.py
     ```
 
-3. Run the Streamlit application:
+4. Run the Streamlit application:
     ```bash
     streamlit run app.py
     ```

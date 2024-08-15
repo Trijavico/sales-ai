@@ -6,7 +6,6 @@ from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import LSTM, Dense, Dropout
 from tensorflow.keras.regularizers import l2
 from sklearn.metrics import accuracy_score, confusion_matrix
-from alpha_vantage.timeseries import TimeSeries
 
 from datetime import datetime
 import yfinance as yf
@@ -65,7 +64,7 @@ model = Sequential([
     Dense(1, activation='sigmoid', kernel_regularizer=l2(0.0005))
 ])
 
-model.compile(optimizer='adam', loss='mse', metrics=['accuracy'])
+model.compile(optimizer='adam', loss='mean_squared_error', metrics=['accuracy'])
 
 history = model.fit(X_train_reshaped, y_train, epochs=150, batch_size=32, validation_split=0.2, verbose=1)
 

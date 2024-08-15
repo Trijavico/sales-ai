@@ -4,3 +4,5 @@ matplotlib
 seaborn
 tensorflow
 yfinance
+scikit-learn
+streamlit
